@@ -34,16 +34,16 @@ public class HelperUtil {
 		}
 	}
 
-   // normalize() {
-   //    let mag = this.getMag();
-   //    if (mag > 0) {
-   //       this.x /= mag;
-   //       this.y /= mag;
-   //    } else if (mag === 0) {
-   //    } else {
-   //       console.log("normalize() error");
-   //    }
-   // }
+	// normalize() {
+	//    let mag = this.getMag();
+	//    if (mag > 0) {
+	//       this.x /= mag;
+	//       this.y /= mag;
+	//    } else if (mag === 0) {
+	//    } else {
+	//       console.log("normalize() error");
+	//    }
+	// }
 
 	public static int randInt(int min, int max) {
 		return (int)(Math.random() * (max - min) + min);

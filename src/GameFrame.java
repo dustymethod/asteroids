@@ -1,9 +1,6 @@
 import javax.swing.JFrame;
 
 /**
-* A side-scroller.  Dont crash into an asteroid!
-* @author Jerem Hilliker
-* @version 2017-02(Feb)-27(Mon) 16:00
 */
 public class GameFrame extends JFrame {
 	public final static int WIDTH = 800;
