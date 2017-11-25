@@ -1,16 +1,19 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 /*
-a star-like particle that slowly moves off screen, then resets.
+	Simple dot particle representing a star, that slowly moves off screen, then resets.
 */
 public class StarParticle extends BaseParticle {
 	private double diameter;
 	private static final int X_RANGE = 100;
-	private double minSpd = -0.5;
-	private double maxSpd = -1;
+	private double minSpd, maxSpd; //particle speed min/max range
 
 	private static final Rectangle2D.Double spawnBounds = new Rectangle2D.Double(GameFrame.WIDTH, 0, GameFrame.WIDTH + X_RANGE, GameFrame.HEIGHT);
-	public StarParticle() {
+
+	public StarParticle(double minSpd, double maxSpd) {
+		super();
+		this.minSpd = minSpd;
+		this.maxSpd = maxSpd;
 		isActive = true;
 		reset();
 		double x = HelperUtil.randDouble(0, GameFrame.WIDTH + X_RANGE);

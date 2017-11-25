@@ -3,9 +3,9 @@ public class ParticleFactory {
 		if (type.equals("HitParticle")) {
 			return new HitParticle();
 		} else if (type.equals("StarParticle")) {
-			return new StarParticle();
+			return new StarParticle(-0.5, -1);
 		} else if (type.equals("FastStarParticle")) {
-			return new FastStarParticle();
+			return new StarParticle(-5, -8);
 		}
 		return null;
 	}
