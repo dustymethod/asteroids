@@ -8,10 +8,12 @@ public class HelperUtil {
 		p1.setLocation(p1.getX() + p2.getX(), p1.getY() + p2.getY());
 	}
 
+	/** Multiply the given point by a factor */
 	public static void multPoint(Point2D.Double p, double factor) {
 		p.setLocation(p.getX() * factor, p.getY() * factor);
 	}
 
+	/** return the magnitude of the givne point. */
 	public static double getMagnitude(Point2D.Double p) {
 		double mag = (p.getX() * p.getX()) + (p.getY() * p.getY());
 		if (mag >= 0) {
@@ -22,6 +24,7 @@ public class HelperUtil {
 		return mag;
 	}
 
+	/** Scale the point to a value between 0 and 1. */
 	public static void normalizePoint(Point2D.Double p) {
 		double mag = getMagnitude(p);
 		if (mag > 0) {
@@ -33,17 +36,6 @@ public class HelperUtil {
 			throw new ArithmeticException("error normalizing.");
 		}
 	}
-
-	// normalize() {
-	//    let mag = this.getMag();
-	//    if (mag > 0) {
-	//       this.x /= mag;
-	//       this.y /= mag;
-	//    } else if (mag === 0) {
-	//    } else {
-	//       console.log("normalize() error");
-	//    }
-	// }
 
 	public static int randInt(int min, int max) {
 		return (int)(Math.random() * (max - min) + min);

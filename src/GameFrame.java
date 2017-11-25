@@ -1,6 +1,8 @@
 import javax.swing.JFrame;
 
 /**
+* @author Amanda Chan
+* @author Jeremy Hilliker
 */
 public class GameFrame extends JFrame {
 	public final static int WIDTH = 800;
